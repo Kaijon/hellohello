@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 git 'https://github.com/Kaijon/hellohello.git'
+                ls '-l'
                 sh 'g++ hello.cpp -o hellokc'                
             }
         }
