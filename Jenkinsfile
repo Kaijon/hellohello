@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                git 'https://github.com/Kaijon/hellohello.git'
+                sh 'g++ hello.cpp -o hellokc'                
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'exit 1'
             }
         }
         stage('Deploy') {
